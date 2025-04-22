@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./media/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("./media/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
+
+
+body {
+    background-color: antiquewhite;
+    font-size: 1.2rem;
+}
+
+h1, h2, div.name {
+    font-family: "Playfair Display";
+    margin: 0;
+}
+
+section {
+    color: rgb(80, 80, 80);
+}
+
+header {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header section {
+    text-align: center;
+    text-wrap: balance;
+}
+
+div.name {
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+div.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+div.icons img {
+    width: 2em;
+}
+
+main .projects {
+    display: grid;
+    justify-content: center;
+}
+
+
+@media (max-width: 599px) {
+    div.name {
+        position: absolute;
+        top: 50%;
+    }
+
+    main h1 {
+        text-align: center;
+    }
+
+
+}
