@@ -12,6 +12,7 @@
 body {
     background-color: antiquewhite;
     font-size: 1.2rem;
+    margin: 0;
 }
 
 h1, h2, div.name {
@@ -24,12 +25,11 @@ section {
 }
 
 header {
-    margin: 20px;
+    margin: 30px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 header section {
@@ -48,17 +48,78 @@ div.icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 div.icons img {
-    width: 2em;
+    width: 30px;
 }
 
-main .projects {
+main, footer {
+    margin-top: 60px;
+}
+
+.project-section {
+    margin: 20px 10px 20px 10px;
+    min-width: 250px;
     display: grid;
     justify-content: center;
+    gap: 40px;
 }
+
+.project {
+    display: grid;
+    justify-content: space-between;
+    grid-template: 
+        "a a"
+        "b c"
+        "d d";
+    box-shadow: 0px 5px 10px 1px gray;
+    width: auto;
+    margin: 0
+}
+
+.project h2, 
+.project section, 
+.project img {
+    padding: 20px;
+}
+
+.image {
+    grid-area: a;
+    background-color: firebrick;
+    min-height: 150px;
+}
+
+.project h2 {
+    grid-area: b;
+}
+
+.project img {
+    grid-area: c;
+    width: 30px;
+}
+
+footer h1 {
+    padding-top: 30px;
+}
+
+footer > *{
+    background-color: olive;
+    display: grid;
+    padding: 10px 20px;
+}
+
+.contact {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact img {
+    width: 25px;
+}
+
 
 
 @media (max-width: 599px) {
@@ -67,9 +128,20 @@ main .projects {
         top: 50%;
     }
 
-    main h1 {
+    main h1, footer h1 {
         text-align: center;
     }
 
+    .project-section {
+        grid-template-columns: 1fr;
+    }
 
+    footer picture{
+        padding: 0;
+    }
+
+    footer picture img {
+        margin-top: 20px;   
+        width: 100%;
+    }
 }
