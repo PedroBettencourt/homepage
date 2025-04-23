@@ -24,16 +24,7 @@ section {
     color: rgb(80, 80, 80);
 }
 
-header {
-    margin: 30px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
 header section {
-    text-align: center;
     text-wrap: balance;
 }
 
@@ -56,7 +47,7 @@ div.icons img {
 }
 
 main, footer {
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .project-section {
@@ -104,9 +95,11 @@ footer h1 {
     padding-top: 30px;
 }
 
-footer > *{
+footer{
     background-color: olive;
-    display: grid;
+}
+
+footer > * {
     padding: 10px 20px;
 }
 
@@ -121,11 +114,30 @@ footer > *{
 }
 
 
+@media (max-width: 600px) {
 
-@media (max-width: 599px) {
+    header {
+        margin: 30px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .content {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
     div.name {
         position: absolute;
         top: 50%;
+    }
+
+    header section {
+        text-align: center;
     }
 
     main h1, footer h1 {
@@ -143,5 +155,155 @@ footer > *{
     footer picture img {
         margin-top: 20px;   
         width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+    header, main {
+        margin: 30px 50px;
+    }
+
+    header picture img {
+        position:relative;
+        width: 400px;
+        float: left;
+        margin: 0;
+        transform: translate(-10px, -10px);
+        z-index: 2;
+    }
+
+    div.name {
+        position: absolute;
+        top: 5%;
+        z-index: 3;
+    }
+
+    header .content {
+        margin-top: 50px;
+        padding: 50px 30px;
+        background-color: white;
+        transform: translate(10px, 10px);
+        box-shadow: 1px 1px 10px 1px gray;
+    }
+
+    .content section {
+        margin: 30px 0px;
+    }
+
+    main h1 {
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+
+    .project-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer > *{
+        padding: 10px 50px;
+    }
+
+    footer .icons {
+        justify-content: flex-start;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr)
+    }
+
+    footer h1,
+    footer div{
+        grid-column: 1/2;
+    }
+
+    footer picture {
+        padding: 0;
+        grid-row: 1/7;
+        grid-column: 2/3;
+        align-self: center;
+    }
+
+    picture img {
+        max-width: 300px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    
+    header, main {
+        margin: 30px 50px;
+    }
+
+    header picture img {
+        position: relative;
+        width: 400px;
+        float: left;
+        margin: 0;
+        z-index: 2;
+    }
+
+    div.name {
+        position: absolute;
+        top: 5%;
+        margin-left: 50px;
+        z-index: 3;
+    }
+
+    header .content {
+        margin-top: 50px;
+        margin-right: 20px;
+        padding: 50px 30px;
+        background-color: white;
+        transform: translate(20px, 50px);
+        box-shadow: 1px 1px 10px 1px gray;
+    }
+
+    .content section {
+        margin: 30px 0px;
+    }
+
+    main h1{
+        margin-top: 150px;
+        margin-left: 10px;
+    }
+
+    .project-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer > *{
+        padding: 10px 50px;
+    }
+
+    footer .icons {
+        justify-content: flex-start;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(6, 1fr);
+        
+    }
+
+    footer h1,
+    footer div{
+        grid-column: 1/2;
+        justify-self: center;
+    }
+
+    footer picture {
+        grid-row: 1/7;
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: start;
+        max-width: 600px;
+    }
+
+    footer picture img {
+        max-width: 600px;
     }
 }
